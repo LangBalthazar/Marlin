@@ -360,10 +360,10 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
   #ifdef AUTO_BED_LEVELING_GRID
 
     // set the rectangle in which to probe
-    #define LEFT_PROBE_BED_POSITION 15
-    #define RIGHT_PROBE_BED_POSITION 170
-    #define BACK_PROBE_BED_POSITION 180
-    #define FRONT_PROBE_BED_POSITION 20
+    #define LEFT_PROBE_BED_POSITION 30
+    #define RIGHT_PROBE_BED_POSITION 150
+    #define BACK_PROBE_BED_POSITION 170
+    #define FRONT_PROBE_BED_POSITION 30
 
      // set the number of grid points per dimension
      // I wouldn't see a reason to go above 3 (=9 probing points on the bed)
@@ -385,16 +385,16 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 
 
   // these are the offsets to the probe relative to the extruder tip (Hotend - Probe)
-  #define X_PROBE_OFFSET_FROM_EXTRUDER -25
-  #define Y_PROBE_OFFSET_FROM_EXTRUDER -29
-  #define Z_PROBE_OFFSET_FROM_EXTRUDER -12.35
+  #define X_PROBE_OFFSET_FROM_EXTRUDER -35  //-25
+  #define Y_PROBE_OFFSET_FROM_EXTRUDER -9  //-29
+  #define Z_PROBE_OFFSET_FROM_EXTRUDER -5  //-12.35
 
-  #define Z_RAISE_BEFORE_HOMING 4       // (in mm) Raise Z before homing (G28) for Probe Clearance.
+  #define Z_RAISE_BEFORE_HOMING 20       // (in mm) Raise Z before homing (G28) for Probe Clearance.
                                         // Be sure you have this distance over your Z_MAX_POS in case
 
   #define XY_TRAVEL_SPEED 8000         // X and Y axis travel speed between probes, in mm/min
 
-  #define Z_RAISE_BEFORE_PROBING 15    //How much the extruder will be raised before traveling to the first probing point.
+  #define Z_RAISE_BEFORE_PROBING 25    //How much the extruder will be raised before traveling to the first probing point.
   #define Z_RAISE_BETWEEN_PROBINGS 5  //How much the extruder will be raised when traveling from between next probing points
 
 
@@ -402,7 +402,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
   //The value is the delay to turn the servo off after powered on - depends on the servo speed; 300ms is good value, but you can try lower it.
   // You MUST HAVE the SERVO_ENDSTOPS defined to use here a value higher than zero otherwise your code will not compile.
 
-//  #define PROBE_SERVO_DEACTIVATION_DELAY 300
+  #define PROBE_SERVO_DEACTIVATION_DELAY 1000 //default was uncommented//
 
 
 //If you have enabled the Bed Auto Leveling and are using the same Z Probe for Z Homing,
