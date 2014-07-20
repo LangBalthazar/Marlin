@@ -442,7 +442,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 
 // default settings
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {100,100,2560,600}  // default steps per unit for k8200 t5 = {64.25,64.25,2560,600}
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {80,80,2560,600}  // default steps per unit for k8200 t5 = {64.25,64.25,2560,600}
 #define DEFAULT_MAX_FEEDRATE          {500, 500, 5, 25}    // (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {9000,9000,100,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for Skeinforge 40+, for older versions raise them a lot.
 
